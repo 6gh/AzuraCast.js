@@ -6,15 +6,20 @@
   "module": "dist/index.es.js",
   "scripts": {
     "build": "rm -r dist && rollup --config",
+    "lint": "eslint src/**",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "6gh",
   "license": "MIT",
   "devDependencies": {
+    "@eslint/js": "^9.3.0",
     "@rollup/plugin-typescript": "^11.1.6",
+    "eslint": "9.x",
+    "globals": "^15.3.0",
     "rollup": "^4.17.2",
     "tslib": "^2.6.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.9.0"
   }
 }

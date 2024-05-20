@@ -31,7 +31,7 @@ export class Base {
   protected _invoke<T>(
     endpoint: string,
     method: string,
-    body?: any
+    body?: unknown
   ): Promise<T> {
     return fetch(`${this._apiUrl}${endpoint}`, {
       method,
