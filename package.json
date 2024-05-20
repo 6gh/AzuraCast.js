@@ -6,7 +6,7 @@
   "module": "dist/index.es.js",
   "scripts": {
     "build": "rm -r dist && rollup --config",
-    "lint": "eslint src/**",
+    "lint": "eslint src/**/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -25,7 +25,4 @@ jobs:
         with:
           node-version: 18
       - name: Lint Action
-        uses: wearerequired/lint-action@v2.3.0
-        with:
-          eslint: true
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+        run: pnpm run lint
