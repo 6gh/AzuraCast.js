@@ -33,7 +33,7 @@ export class Base {
     method: string,
     body?: unknown
   ): Promise<T> {
-    return fetch(`${this._apiUrl}${endpoint}`, {
+    return fetch(`${this._apiUrl}/api${endpoint}`, {
       method,
       headers: {
         "Content-Type": "application/json",

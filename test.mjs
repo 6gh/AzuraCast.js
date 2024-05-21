@@ -1,16 +1,23 @@
 import test from 'ava';
-import { AzuraCastClient } from "./dist/index.js"
+import { AzuraCastClient } from "./dist/index.js";
+import nock from "nock";
 
 /**
  * @type { AzuraCastClient }
  */
 let client;
 
+nock("https://demo.azuracast.com")
+	.get("/api/stations")
+	.reply(200, {
+		yay: true
+	})
+
 test('Initialize Client', t => {
 	try {
 		client = new AzuraCastClient({
-			apiKey: process.env.API_KEY,
-			apiUrl: process.env.API_URL,
+			apiUrl: "https://demo.azuracast.com",
+			apiKey: "TOTALLY_REAL:API_KEY",
 		});
 
 		t.pass('Client initialized')
@@ -19,13 +26,7 @@ test('Initialize Client', t => {
 	}
 });
 
-test('Get all stations', t => {
-	client.Stations.getAll()
-		.then(stations => {
-			t.pass(`${stations.length} stations found.`)
-		})
-		.catch(error => {
-			console.error(error);
-			t.fail("Failed to get stations")
-		})
+test('Get all stations', async t => {
+	const stations = await client.Stations.getAll();
+	t.pass(t.assert(stations))
 })
