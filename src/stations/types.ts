@@ -1,5 +1,5 @@
 /**
- * Now Playing Station API Response
+ * Station API Response
  */
 export interface Api_NowPlaying_Station {
   /**
@@ -179,4 +179,17 @@ export interface Api_NowPlaying_StationMount
    * @example true
    */
   is_default: boolean;
+}
+
+export interface Api_NowPlaying_StationFallback {
+  hasRecord: boolean;
+  links: {
+    download: string | null;
+  };
+}
+
+export interface Api_NowPlaying_StationFallbackDelete {
+  success: boolean;
+  message: string;
+  formatted_message: string;
 }
