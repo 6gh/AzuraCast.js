@@ -2,6 +2,9 @@
 
 A wrapper to help you interact with the AzuraCast API
 
+> [!WARNING]
+> Currently in alpha. Not ready for any deployment
+
 ## Install
 
 > [!WARNING]
@@ -24,13 +27,19 @@ const client = new AzuraCastClient({
   apiUrl: "YOUR_API_URL",
   apiKey: "YOUR_API_KEY",
 });
-
-client.Stations.getAll()
-  .then((stations) => {
-    // list all the stations in the instance
-    console.log(stations);
-  })
-  .catch((err) => {
-    console.error("Something went wrong!", err);
-  });
 ```
+
+Or CommonJS:
+
+```js
+const { AzuraCastClient } = require("azuracast.js");
+
+const client = new AzuraCastClient({
+  apiUrl: "YOUR_API_URL",
+  apiKey: "YOUR_API_KEY",
+});
+```
+
+## API Coverage
+
+If you'd like to see what API endpoints are currently available to be used with this wrapper, [visit the PROGRESS.md file](PROGRESS.md). Currently the project is in alpha so expect there to not be a lot of coverage, or full support.
