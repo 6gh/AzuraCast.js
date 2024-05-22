@@ -7,9 +7,6 @@ A wrapper to help you interact with the AzuraCast API
 
 ## Install
 
-> [!WARNING]
-> Does not work. This is just for future reference
-
 Install with your favorite package manager:
 
 ```console
@@ -22,22 +19,29 @@ Start by using ES Modules:
 
 ```js
 import { AzuraCastClient } from "azuracast.js";
-
-const client = new AzuraCastClient({
-  apiUrl: "YOUR_API_URL",
-  apiKey: "YOUR_API_KEY",
-});
 ```
 
 Or CommonJS:
 
 ```js
 const { AzuraCastClient } = require("azuracast.js");
+```
 
+Declare your client:
+
+```js
 const client = new AzuraCastClient({
   apiUrl: "YOUR_API_URL",
   apiKey: "YOUR_API_KEY",
 });
+```
+
+and start using it!
+
+```js
+client.Stations.getAll()
+  .then(stations => { ... })
+  .catch(err => { ... });
 ```
 
 ## API Coverage
