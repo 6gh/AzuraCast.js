@@ -96,10 +96,10 @@ export interface Api_NowPlaying_Station {
   hls_is_default: boolean;
   /**
    * The full URL to listen to the HLS stream for the station.
-   * @type {string}
+   * @type {string | null}
    * @example "https://example.com/hls/azuratest_radio/live.m3u8"
    */
-  hls_url: string;
+  hls_url: string | null;
   /**
    * HLS Listeners
    * @type {number}

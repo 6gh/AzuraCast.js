@@ -31,9 +31,9 @@ client.Stations.getAll() // <- this is that the "wrapper method" entails
 
 > The following categories and endpoints were taken from the API documentation available from any AzuraCast instance followed by `/api`
 
-- :radio_button: Now Playing
-  - :radio_button: GET /nowplaying `<client>.NowPlaying.getAll()`
-  - :radio_button: GET /nowplaying/{station_id} `<client>.NowPlaying.get(stationId)`
+- :white_check_mark: Now Playing
+  - :white_check_mark: GET /nowplaying `<client>.NowPlaying.getAll()`
+  - :white_check_mark: GET /nowplaying/{station_id} `<client>.NowPlaying.get(stationId)`
 - :radio_button: Stations: General
   - :white_check_mark: GET /station/{station_id}/fallback: `<client>.Station.getFallback(stationId)`
   - :x: POST /station/{station_id}/fallback
@@ -44,9 +44,9 @@ client.Stations.getAll() // <- this is that the "wrapper method" entails
   - :x: GET /station/{station_id}/stereo-tool-configuration
   - :x: POST /station/{station_id}/stereo-tool-configuration
   - :x: DELETE /station/{station_id}/stereo-tool-configuration
-- :x: Stations: Song Requests
-  - :x: GET /station/{station_id}/requests
-  - :x: POST /station/{station_id}/request/{request_id}
+- :radio_button: Stations: Song Requests
+  - :white_check_mark: GET /station/{station_id}/requests `<client>.SongRequests.getRequestable(stationId)`
+  - :radio_button: POST /station/{station_id}/request/{request_id} `<client>.SongRequests.request(stationId, requestId)`
 - :x: Stations: Service Control
   - :x: GET /station/{station_id}/status
   - :x: POST /station/{station_id}/restart
@@ -138,12 +138,12 @@ client.Stations.getAll() // <- this is that the "wrapper method" entails
   - :x: GET /station/{station_id}/webhook/{id}
   - :x: PUT /station/{station_id}/webhook/{id}
   - :x: DELETE /station/{station_id}/webhook/{id}
-- :x: Administration: Custom Fields
-  - :x: GET /admin/custom_fields
-  - :x: POST /admin/custom_fields
-  - :x: GET /admin/custom_field/{id}
-  - :x: PUT /admin/custom_field/{id}
-  - :x: DELETE /admin/custom_field/{id}
+- :radio_button: Administration: Custom Fields
+  - :white_check_mark: GET /admin/custom_fields `<client>.CustomFields.getAll()`
+  - :white_check_mark: POST /admin/custom_fields `<client>.CustomFields.create(customFieldData)`
+  - :white_check_mark: GET /admin/custom_field/{id} `<client>.CustomFields.get(customFieldId)`
+  - :radio_button: PUT /admin/custom_field/{id} `<client>.CustomFields.update(customFieldId, customFieldData)`
+  - :radio_button: DELETE /admin/custom_field/{id} `<client>.CustomFields.delete(customFieldId)`
 - :x: Administration: Users
   - :x: GET /admin/users
   - :x: POST /admin/users

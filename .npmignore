@@ -2,3 +2,9 @@
 .vscode
 src
 .gitignore
+eslint.config.mjs
+pnpm-lock.yaml
+PROGRESS.md
+rollup.config.mjs
+test.mjs
+tsconfig.json

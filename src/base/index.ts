@@ -42,7 +42,7 @@ export class Base {
       body: JSON.stringify(body),
     }).then((response) => {
       if (!response.ok) {
-        throw new Error(response.statusText);
+        throw new Error(`${response.statusText}: ${response.url}`);
       }
       return response.json();
     });

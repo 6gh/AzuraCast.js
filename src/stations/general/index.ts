@@ -1,4 +1,4 @@
-import { Base } from "../base";
+import { Base } from "../../base";
 import {
   Api_NowPlaying_Station,
   Api_NowPlaying_StationFallback,
