@@ -1,6 +1,6 @@
 {
   "name": "azuracast.js",
-  "version": "0.2.0-alpha.1",
+  "version": "0.3.0-alpha.1",
   "description": "A Node wrapper for the AzuraCast API",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -15,6 +15,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/6gh/AzuraCast.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/6gh/AzuraCast.js/issues"
   },
   "devDependencies": {
     "@eslint/js": "^9.3.0",
